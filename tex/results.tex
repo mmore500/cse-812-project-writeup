@@ -72,7 +72,7 @@ Further study would be required to evaluate this hypothesis.
 
 Figure \ref{fig:resource_contributed} compares resource sharing phenotypes under different treatments.
 Under low mutational load (levels one and two), cells in large and small resource wave treatments preferentially share resource with same-channel neighbors ($p < 0.05$; bootstrap test).
-At mutational load levels three and above, resource sharing rates decline sharply among cells in small resource wave treatments and cells do not preferentially share resource with same-channel neighbors ($p = 0.27, 0.43, 0.57$; bootstrap test).
+At mutational load levels three and above, resource sharing rates decline sharply among cells in small resource wave treatments and cells do not preferentially share resource with same-channel neighbors ($p = 0.27, 0.43, 0.43$; bootstrap test).
 At mutational load level three in large resource wave treatments, however, cells continue to preferentially share resource with same-channel neighbors ($p < 0.05$; bootstrap test).
 At mutational load levels four and five, in large resource wave treatments cells actually preferentially share resource with neighbors with \textit{different} channel ID ($p < 0.0001$; bootstap test).
 
@@ -83,12 +83,19 @@ At mutational load levels three, four, and five with large resource wave conditi
 To better understand, let's consider a hypothetical example: a cell with channel ID $A$ reproduces, producing a daughter cell with the new channel ID $B$.
 Under the conditions in question, Figure \ref{fig:resource_contributed_by_treat} shows that cells in channel group $A$ tend to send resource to cells in channel group $B$.
 This resource-sharing pattern between a parental same-channel group and a propagule same-channel group is analogous to offspring endowment behaviors commonly observed in biological systems (e.g., breastfeeding in mammals or nutritious endosperm in plant seeds).
-However, it is surprising to observe this resource-sharing pattern under high mutational, in the context (as discussed earlier) of antagonistic reproductive behavior amongst same-channel cells.
+In previous work with DISHTINY, we observed the evolution of propagule endowment behavior (which helps new same-channel groups grow a resource collection network large enough to be self-sufficient) in the context of cooperative same-channel groups \citep{moreno2018toward}.
+However, it is surprising to observe this resource-sharing pattern under high mutational load, in the context (as discussed earlier) of antagonistic reproductive behavior among same-channel cells.
 This situation might be analogized to a household where the parents distrust each other and fight bitterly but both nevertheless make contributions to the child's college savings plan.
 
 As expected, at low mutational loads we observed resource sharing behavior between same-channel neighbors.
 This behavior helps to grow and maintain same-channel groups, giving them a competitive advantage against groups that do not share resource.
 Resource sharing is more robust to mutational load in large resource wave treatments, perhaps because it is more important to ensure the large same-channel resource collecting groups required under those conditions.
-The surprising observation of propagule endowment in antagonistic same-channel groups is intriguing and difficult to explain.
-It might be due to TODO
-It might also be an artifact of the early evolutionary stage when the population is diverse and isn't yet saturated with strong fitness competitors.
+
+\input{fig/resource_contributed_start.tex}
+
+The surprising observation of propagule endowment in antagonistic same-channel groups is likely an artifact of the small number of cellular generations elapsed in treatments with large resource wave size and high mutational load.
+Figure \ref{fig:resource_contributed_start} shows the resource sharing behavior observed at the very beginning of the evolutionary run, between updates 0 through 20 for large resource wave treatments at mutational load levels four and five.
+The genomes randomly seeded at the beginning of the evolutionary run exhibit significant same-channel and to-propagule resource sharing, likely induced by event triggers ``Neighbor's Channel ID Matches Mine'' and ``Neighbor's Channel ID Descends From Mine.''
+As we saw in Figure \ref{fig:resource_contributed_by_treat}, by the end of these evolutionary runs the same-channel resource sharing behavior is gone but the to-propagule resource sharing remains.
+From this data, whether to-propagule resource sharing remains after several cellular generations because it is advantageous or because it simply is not strongly disadvantageous enough to have been selected away yet remains uncertain.
+Longer evolutionary runs where more cellular generations elapse under these treatments would help resolve this question.
