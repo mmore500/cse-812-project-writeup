@@ -1,19 +1,40 @@
 \begin{figure*}[t]
 \begin{center}
 
-\begin{subfigure}[b]{\columnwidth}
-\includegraphics[width=\textwidth]{img/signalgp-cartoon}%
-\caption{TODO}
-\label{fig:TODO}
-\end{subfigure}%
-\begin{subfigure}[b]{\columnwidth}
-\includegraphics[width=\textwidth]{img/dishtinygp-cartoon}
-\caption{TODO}
-\label{fig:TODO}
-\end{subfigure}
-
-\caption{TODO}
+\caption{
+Schematics detailing the structure of a SignalGP instance (\ref{fig:signalgp-cartoon}) and DISHTINY cell, which is controlled by SignalGP instances (\ref{fig:dishtinygp-cartoon}).
+We chose to implement SignalGP with DISHTINY because its event-driven design facilitates the evolution of behaviors that are responsive to cues from the environment and from other agents.
+Within a DISHTINY cell, we mirror a single SignalGP program across instances oriented in each cardinal direction in order to facilitate the evolution of behavior that is symmetric with respect to direction (e.g., responds equivalently to an event if it occurs to the North, South, East, or West).
+}
 \label{fig:signalgp-dishtinygp}
+
+\begin{subfigure}[b]{0.4\linewidth}
+\includegraphics[width=\linewidth]{signalgp-cartoon}%
+\vspace{3ex}
+\caption{
+Schematic of a single SignalGP instance.
+SignalGP is built around the event-driven paradigm.
+In response to messages from the environment, from other SignalGP instances, or from within the SignalGP instance itself, the SignalGP instance executes particular functions on its virtual hardware.
+The ``tag'' portion of the message determines which function is executed.
+SignalGP functions are segments of linear genetic programming code.
+A SignalGP program is a collection of functions.
+}
+\label{fig:signalgp-cartoon}
+\end{subfigure}%
+\hspace{0.1\linewidth}
+\begin{subfigure}[b]{0.4\linewidth}
+\includegraphics[width=\linewidth]{dishtinygp-cartoon}
+\vspace{3ex}
+\caption{
+Schematic of a focal DISHTINY cell (in purple) in relation to four neighboring cells.
+A DISHTINY cell is controlled by four SignalGP instances, one oriented towards each neighboring cell.
+The genotype of each DISHTINY cell is a single SignalGP program;
+each SignalGP instance in a DISHTINY cell executes that SignalGP program on independent virtual hardware.
+SignalGP instances within a cell may freely message amongst themselves.
+Messages sent to and received from neighboring cells are handled exclusively by the single SignalGP instance facing that neighboring cell.
+}
+\label{fig:dishtinygp-cartoon}
+\end{subfigure}
 
 \end{center}
 \end{figure*}

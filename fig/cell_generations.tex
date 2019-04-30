@@ -1,16 +1,20 @@
-\newcommand{\STAB}[1]{\begin{tabular}{@{}c@{}}#1\end{tabular}}
-
 \begin{table}
- \begin{tabular}{l c|c|c|} % alignment of each column data
+ \centering
+ \begin{tabular}{l c|cc} % alignment of each column data
+ \multicolumn{4}{c}{\textbf{Elapsed Cell Generations}} \\
  & & \multicolumn{2}{c}{Resource Wave Size} \\
  & & Small & Large \\
  \hline
- \multirow{5}{*}{\STAB{\rotatebox[origin=c]{90}{Mutational Load}}} & 1 & $298 \pm 234$ & $50 \pm 38$ \\
+ \multirow{5}{*}{\STAB{\rotatebox[origin=c]{90}{\parbox{1.5cm}{\centering Mutational\\Load}}}} & 1 & $298 \pm 234$ & $50 \pm 38$ \\
  & 2 & $224 \pm 145$ & $32 \pm 10$ \\
  & 3 & $111 \pm 22$ & $17 \pm 3$
  \\
  & 4 & $74 \pm 11$ & $11 \pm 1$ \\
  & 5 & $120 \pm 2$ & $6 \pm 1$ \\
 \end{tabular}
+\caption{
+Number of elapsed cellular generations by treatment (mean $\pm$ standard deviation across replicates).
+}
 \label{tab:cell_generations}
 \end{table}
+  

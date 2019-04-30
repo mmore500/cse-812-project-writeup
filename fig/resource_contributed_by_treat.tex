@@ -56,7 +56,17 @@
 \end{subfigure}\\
 \vspace{5ex}
 \caption{
-TODO
+Detailed audits of resource sharing phenotypes by treatment.
+Bar height represents the mean amount of resource transferred per update per neighboring pair of cells.
+Each two-tone pair of bars compares cell pairs with a particular relationship to cell pairs without that relationship.
+The ``Same Channel'' bar pair compares resource sharing between cell pairs with a common channel and cell pairs on different channels.
+The ``Cell Parent'' bar pair compares the amount of resource shared from a cell to its cellular parent to the amount of resource shared from a cell to cells that are not its cellular parent.
+The ``Cell Child'' bar pair compares the amount of resource shared from a cell to its cellular child to the amount of resource shared from a cell to cells that are not its cellular child.
+For the next two relationships, consider a cell with channel ID $A$ that reproduces, producing a daughter cell with the new channel ID $B$.
+Let the channel ID $C$ denote a channel ID that is unique from channel IDs $A$ and $B$.
+The ``Propagule Parent'' bar pair compares the amount of resource shared from a cell to cells with the channel ID that its channel ID descends from (e.g., from cells with channel ID $B$ to cells with channel ID $A$) to the amount of resource shared to other cells that are not part of its same-channel network (e.g., to cells with channel ID $C$).
+The ``Propagule Child'' bar pair compares the amount of resource shared from a cell to cells with a channel ID that descends from its channel ID (e.g., from cells with channel ID $A$ to cells with channel ID $B$) to the amount of resource shared to other cells that are not part of its same-channel network (e.g., to cells with channel ID $C$).
+Error bars represent 95\% confidence intervals.
 }
 \label{fig:resource_contributed_by_treat}
 \end{center}
