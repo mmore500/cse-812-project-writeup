@@ -41,4 +41,54 @@ However, the large number of extant phylogenies for high mutational load with la
 With more computing time, we could extend the evolutionary runs of treatments with large resource wave size and/or larger mutational load in order to obtain populations with comparable evolutionary progress for all treatments.
 However, we can still identify and discuss interesting differences between treatments while keeping this complicating factor in mind.
 
-The central question we wish to answer:
+Now, we can turn to address the central question motivating this experiment: how does mutational load affect the evolutionary viability of cooperative strategies characteristic of fraternal transitions in individuality?
+We're interested in two cooperative behaviors in particular,
+\begin{itemize}
+\item resource sharing between same-channel cells
+\item and reproductive coordination between same-channel cells (e.g., cells reproducing over other-channel neighbors instead of same-channel neighbors).
+\end{itemize}
+Let's consider the effect of mutational load on each of these phenotypes in turn.
+
+\input{fig/reproductive_labor.tex}
+
+Figure \ref{fig:reproductive_labor} compares reproductive cooperation phenotypes by treatment.
+Under mutational load levels one and two in all treatments, cells preferentially reproduce over other-channel neighbors instead of same-channel neighbors ($p < 0.05$; bootstrap tests).
+This observation matches expectation: same-channel groups that cooperate compete more efficiently for space than those that do not.
+At mutational load levels three and four for small resource wave treatments, cells still preferentially reproduce over other-channel neighbors instead of same-channel neighbors ($p < 0.05$; non-overlapping 95\% confidence intervals).
+However, at mutational load level three in large resource wave treatments this cooperative reproduction phenotype fades under large resource wave conditions.
+In small resource wave treatments, the cooperative reproduction phenotype only disappears at the highest mutational load level, five.
+Reproductive cooperation appears more robust to mutational load in small resource wave conditions than in large resource wave conditions.
+This might be because this particular cooperative behavior is more essential to resource-collecting group formation and maintenance in smaller groups or because, due to the numerically smaller cell count of same-channel groups under the small wave treatment, the probability of dangerous mutant defectors (i.e., mutants that reproduce over same-channel neighbors) is smaller.
+
+Surprisingly, at high mutational loads we actually observe active reproductive \textit{antagonism} between same-channel cells.
+That is, cells preferentially reproduce over same-channel neighbors instead of other-channel neighbors.
+This antagonistic phenotype occurs at mutational loads 4 and 5 under large resource wave conditions and at mutational load 5 under small resource wave conditions ($p < 0.01$; bootstrap tests).
+A possible explanation of this surprising explanation is that under higher mutational loads when the behavior of same-channel kin is more uncertain these kin actually pose a greater threat to a cell than other-channel neighbors.
+Because resource collection rate depends on same-channel group configuration, if a cell has collected enough resource to reproduce it is likely that its same-channel kin are also capable of reproducing.
+Hence, cells would choose to antagonistically reproduce over same-channel kin to eliminate them (instead of eliminating other-channel neighbors, which are perhaps less likely to have enough resource to pose a reproductive threat).
+Further study would be required to evaluate this hypothesis.
+
+\input{fig/resource_contributed.tex}
+
+Figure \ref{fig:resource_contributed} compares resource sharing phenotypes under different treatments.
+Under low mutational load (levels one and two), cells in large and small resource wave treatments preferentially share resource with same-channel neighbors ($p < 0.05$; bootstrap test).
+At mutational load levels three and above, resource sharing rates decline sharply among cells in small resource wave treatments and cells do not preferentially share resource with same-channel neighbors ($p = 0.27, 0.43, 0.57$; bootstrap test).
+At mutational load level three in large resource wave treatments, however, cells continue to preferentially share resource with same-channel neighbors ($p < 0.05$; bootstrap test).
+At mutational load levels four and five, in large resource wave treatments cells actually preferentially share resource with neighbors with \textit{different} channel ID ($p < 0.0001$; bootstap test).
+
+\input{fig/resource_contributed_by_treat.tex}
+
+Figure \ref{fig:resource_contributed_by_treat}, which provides a more detailed look at resource sharing behavior under each treatment, helps to explain the observation of preferential resource sharing with other-channel neighbors.
+At mutational load levels three, four, and five with large resource wave conditions, a cell preferentially shares resource with members of same-channel groups that descend from that cell's same-channel group ($p < 0.05$; non-overlapping 95\% confidence intervals).
+To better understand, let's consider a hypothetical example: a cell with channel ID $A$ reproduces, producing a daughter cell with the new channel ID $B$.
+Under the conditions in question, Figure \ref{fig:resource_contributed_by_treat} shows that cells in channel group $A$ tend to send resource to cells in channel group $B$.
+This resource-sharing pattern between a parental same-channel group and a propagule same-channel group is analogous to offspring endowment behaviors commonly observed in biological systems (e.g., breastfeeding in mammals or nutritious endosperm in plant seeds).
+However, it is surprising to observe this resource-sharing pattern under high mutational, in the context (as discussed earlier) of antagonistic reproductive behavior amongst same-channel cells.
+This situation might be analogized to a household where the parents distrust each other and fight bitterly but both nevertheless make contributions to the child's college savings plan.
+
+As expected, at low mutational loads we observed resource sharing behavior between same-channel neighbors.
+This behavior helps to grow and maintain same-channel groups, giving them a competitive advantage against groups that do not share resource.
+Resource sharing is more robust to mutational load in large resource wave treatments, perhaps because it is more important to ensure the large same-channel resource collecting groups required under those conditions.
+The surprising observation of propagule endowment in antagonistic same-channel groups is intriguing and difficult to explain.
+It might be due to TODO
+It might also be an artifact of the early evolutionary stage when the population is diverse and isn't yet saturated with strong fitness competitors.
