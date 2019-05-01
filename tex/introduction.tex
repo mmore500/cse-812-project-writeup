@@ -1,26 +1,29 @@
 \section{Introduction}
 
-It is the aim of Artificial Life research to realize engineered systems that exhibit properties of biological life in order to study them, but also with an eye towards applications such as artificial intelligence \citep{bedau2003artificial}.
-Studies of evolution have been of particular interest to the community, especially in regard to how organisms are produced with increasing sophistication and complexity \citep{goldsby2017increasing}.
-This particular issue is often described as ``open-ended evolution.''
-Although precise definitions and measures of open-ended evolution are still being established, this term is generally understood to refer to evolving systems that exhibit the continued production of novelty \citep{taylor2016open}.
-Evolutionary transitions in individuality, which are key to the complexification and diversification of biological life \citep{smith1997major}, have been highlighted as key research targets with respect to the question of open-ended evolution \citep{ray1996evolving, banzhaf2016defining}.
-In an evolutionary transition of individuality, a new, more complex replicating entity is derived from the combination of cooperating replicating entities which have entwined their long-term fates \citep{west2015major}.
-Eusocial insect colonies and multicellular organisms exemplify this phenomenon \citep{smith1997major}.
-Like the definition of open-ended evolution, the notion of what constitutes an evolutionary individual is not concretely established;
-close coordination and cooperation between component entities, reproductive division of labor between component entities, reproductive bottlenecks of component entities, reproductive lineages (e.g. parent-offspring relationships) at the level of the ensemble are among criteria cited for evolutionary individuality
-\citep{ereshefsky2015rethinking, bouchard2013symbiotic}.
+In a fraternal evolutionary transition of individuality, a new, more complex replicating entity is derived from the combination of cooperating kin which have entwined their long-term fates \citep{west2015major}.
+Eusocial insect colonies and multicellular organisms exemplify this phenomenon  \citep{smith1997major}.
+In the first case, individual insects (e.g., ants) act in concert towards the subsistence and propagation of the collective (e.g., an ant colony).
+In the second, individual cells join together into a highly structured collective in which only a fraction participate in the germ line.
 
-In order to study evolutionary transitions of individuality, we must devise a system in which we expect such transitions to occur in a detectable manner.
-To this end, we introduce the DISHTINY (DIStributed Hierarchical Transitions of IndividualitY) platform, which seeks to achieve this goal by explicitly registering organisms in cooperating groups that coordinate spatiotemporally to maximize the harvest of a resource.
-Detection of a transition of individuality in DISHTINY is accomplished by identifying resource-sharing and reproductive division of labor among organisms registered to the same cooperating group.
-Our system is designed such that hierarchal transitions across an arbitrary number of levels of individuality can be selected for and detected.
-We have focused this system on a rigid form of major transition using simple organisms, but the underlying principles that we are studying here can be applied to a wide range of artificial life systems.
-Furthermore, DISHTINY is decentralized;
-it is amenable to massive parallelization via distributed computing.
-We believe that such scalability --- with respect to both concept and implementation --- is an essential consideration in the pursuit of artificial systems capable of generating complexity and novelty rivaling that of biological life via open-ended evolution.
+A meta-organism composed of fraternal kin (e.g., a multicellular organism composed of individual cells) in some ways resembles a distributed system.
+In order for a meta-organism to succeed, its constituent parts --- which interact asynchronously --- must cooperate to perform tasks and make decisions at the collective level.
+For example, ants use pheromones to exchange information about the location and quality of food sources in order to collectively explore their environment and forage resources for the colony.
 
-%@CAO, I'm cutting these for now to save space.
-%We begin by laying out the design of the DISHTINY platform.
-%Then, we introduce a model organism used to test for selection for high-level individuality in DISHTINY.
-%Finally, we discuss the results of ecological competition and evolutionary experiments, which demonstrate selection for --- and emergence of --- high-level individuality in DISHTINY.
+Distributed systems must contend with failures and, ideally, nevertheless continue to function effectively.
+The most commonly considered failure mode is crash failures, where an element of the distributed system loses some functionality or becomes unresponsive.
+However, failure modes where a node begins to exhibit arbitrary, or even malicious, behavior --- referred to as byzantine failures --- are also possible.
+Like distributed systems, fraternal groups contend with failures of their constituent members.
+Over time, an individual member accumulates mutations which, eventually, may cause that member to cease to function properly (i.e., a crash failure) or even act maliciously (i.e., a byzantine failure).
+In particular, multicellular organisms often contend with cancer, a byzantine failure where tumor cells engage in unchecked reproduction.
+Studying the relationship between mutation and fraternal transitions of individuality is of both scientific and practical interest.
+From a scientific perspective, we might gain insight into the mutation-management challenges that fraternal groups face and the evolutionary trajectories that clear those hurdles.
+From a practical perspective, better understanding evolved mutation-management solutions in fraternal groups may provide inspiration for new methods to secure distributed systems against failures.
+
+In previous work, we have developed a digital framework to study fraternal transitions of individuality \cite{moreno2018toward}.
+This framework, DISHTINY, is designed as distributed system: individual digital cells operate independently and periodically communicate with neighbors via messages.
+This project uses DISHTINY to investigate the relationship between mutation intensity and the evolution of cooperation.
+Specifically, we ask
+\begin{itemize}
+\item Do cooperative strategies become disadvantageous under higher mutation intensity?
+\item What is the relationship between group size and the effect of mutation intensity on the viability of cooperative strategies?
+\end{itemize}
