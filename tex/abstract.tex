@@ -4,22 +4,21 @@ Natural evolutionary history is profoundly shaped by evolutionary transitions in
 Fraternal transitions in individuality occur specifically when the derived replicating entity is composed of kin groups of a lower-level replicator;
 examples include the evolution of multicellularity and the evolution of eusocial insect colonies.
 The conditions necessary for fraternal transitions to occur and the mechanisms by which such transitions occur have been a fruitful target of scientific interest and open questions that warrant continued investigation remain.
-Digital evolution techniques allow pursuit of such biologically-motivated questions that otherwise, \textit{in vivo}, might require experiments that are slow, expensive, or call for manipulation of physically immutable variables. %
 
-We present an extension of previous exploratory work with the DISHTINY (Distributed Hierarchical Transitions in IndividualitY) framework.
-In this current work we introduce a more open-ended digital organism model in which cells are controlled by heritable computer programs, similarly to the well-known Avida digital evolution system.
-Specifically, we incorporate the SignalGP genetic programming representation, which allows for dynamic (event-driven) interactions among digital cells and between cells and their environment.
-DISHTINY allows SignalGP-controlled cells to unite into explicitly registered cooperating groups.
-Membership in these cooperating groups is limited to kin: at birth, a cell can either join the same cooperative network as its parent or begin a new network.
-A cooperative resource-collection mechanism incentivizes group formation.
-In order to facilitate evolvability of directionally-symmetric phenotypes, we exploit the dynamic nature of SignalGP to mirror genetic programming across directionally-arrayed computational instances, a novel approach in grid-based digital evolution work.
-DISHTINY cells evolve phenotypes characteristic of fraternal transitions in individuality with respect to these cooperating groups: reproductive division of labor, resource sharing (including, in some replicates, endowment of offspring propagule groups), and apoptosis.
-% strategic apoptosis, but we don't  quite have complete evidence of this yet
+In previous work, we developed a digital framework to study fraternal transitions of individuality.
+This framework, DISHTINY, is designed as distributed system: individual digital cells operate independently and periodically communicate with neighbors via messages.
+This project uses DISHTINY to investigate the relationship between mutation intensity and the evolution of cooperation.
+Specifically, we ask
+\begin{itemize}
+\item Do cooperative strategies become disadvantageous under higher mutation intensity?
+\item What is the relationship between group size and the effect of mutation intensity on the viability of cooperative strategies?
+\end{itemize}
 
-Our research raises a slew of exciting potential extensions.
-DISHTINY's fundamentally spatial and distributed conception will allow high-performance parallel computing hardware to be leveraged to enable large-scale multicellularity experiments consisting of millions, instead of thousands, of cells.
-The dynamic, event-driven design of SignalGP provides avenues to introduce ploidy and enable direct communication and resource sharing between distant cells (e.g., neurological and vascular faculties).
-From an applied perspective, fraternal transitions in individuality might yield more complex digital organisms that exhibit more sophisticated, and potentially useful, capabilities (for example, as reinforcement-learning agents).
-From a scientific perspective, we believe that as an experimental system open-ended digital multicellular systems will provide unique insight into evolutionary transitions in individuality.
-
+We find that high mutational load derails the evolution of cooperative, multicellular phenotypes.
+Specifically, we observed,
+\begin{itemize}
+\item cooperative reproductive behavior observed under low mutational load is replaced by antagonistic reproductive behavior under high mutational load,
+\item cooperative resource sharing behavior observed under low mutational load disappears under higher mutational loads,
+\item cooperative reproductive behavior and cooperative resource sharing exhibit opposite trends in sensitivity mutational intensity with respect to group size, the first being more sensitive in large groups and the latter being more sensitive in small groups.
+\end{itemize}
 \end{abstract}
